@@ -1,5 +1,15 @@
 import os
 from subprocess import Popen
+
+import json
+  
+# Opening JSON file
+f = open('whisper/vocab.json')
+  
+# returns JSON object as 
+# a dictionary
+vocab = json.load(f)
+  
 def get_audio():
   if os.path.exists("prompt_request.wav"):
     return stt()
