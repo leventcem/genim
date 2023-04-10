@@ -4,7 +4,7 @@ from subprocess import Popen
 app = Flask(__name__)
 
 # window = webview.create_window("DALL_E", app)
-openai.api_key = "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"
+openai.api_key = "sk-nGUHH9yYuKIv61RKBNTdT"+"3BlbkFJ587IJDRhFECAVuSl7wJQ"
 
 @app.route("/")
 def index():
