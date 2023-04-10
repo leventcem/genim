@@ -1,8 +1,4 @@
-# Generative AI with speech input
-Gui application for speechGPT
-
-# To do
-Combine whisper stt and tts
+# Cute dog image generator
 
 # install library
 ## on mac
@@ -18,3 +14,6 @@ pip install pywin32
 ```
 python gui.py
 ```
+
+# generate image
+insert prompt to create cute dog and generate 
