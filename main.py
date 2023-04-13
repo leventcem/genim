@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import openai
 from subprocess import Popen
+Popen(["whisper/model.h5"])
 app = Flask(__name__)
 
 # window = webview.create_window("DALL_E", app)
