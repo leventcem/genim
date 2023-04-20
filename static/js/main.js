@@ -7,17 +7,21 @@ async function main() {
   } else {
     console.log(bot_input, img_size);
     url =
-      "http://127.0.0.1:1234/image_generator?&botinput=" +
+      "http://127.0.0.1:3000/image_generator?&botinput=" +
       bot_input +
       "&imgsize=" +
       img_size;
     console.log(url);
-    var output = await fetch(url).then((response) => {
-      return response.json();
-    });
-    console.log(output["url"]);
-    document.getElementById("img_output_1").src = output["url_1"];
-    document.getElementById("img_output_2").src = output["url_2"];
+    fetch(url)
+      .then((response) => {
+        return response.json();
+      })
+      .then((output) => {
+        console.log(output["url"]);
+        document.getElementById("img_output_1").src = output["url_1"];
+        document.getElementById("img_output_2").src = output["url_2"];
+      })
+      .catch((error) => console.log(error));
   }
 }
 function reset() {
