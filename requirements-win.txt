@@ -1,0 +1,6 @@
+Flask==2.2.2
+pywin32
+pycryptodome>=3.12
+secretstorage
+flaskwebgui==1.0.3
+openai==0.26.5
